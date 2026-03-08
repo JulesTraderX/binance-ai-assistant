@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "1a4b480d-0665-4776-99f0-48af8e83c7ed",
+      "agentId": "julesmomentumbot",
+      "name": "JulesMomentumBot-heartbeat",
+      "description": "JulesMomentumBot - 5min market monitoring",
+      "enabled": true,
+      "createdAtMs": 1772867773982,
+      "updatedAtMs": 1772964136959,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 300000,
+        "anchorMs": 1772867773982
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute the full heartbeat sequence from HEARTBEAT.md: check USDT balance, BTCUSDT price, ETHUSDT price, RSI(14)/EMA(50)/EMA(200) on 1h, volume rank, evaluate BUY/SELL signals, execute if conditions met, send Telegram summary.",
+        "timeoutSeconds": 120,
+        "lightContext": true
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram"
+      },
+      "state": {
+        "nextRunAtMs": 1772967736959,
+        "lastRunAtMs": 1772964089213,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 47746,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 8,
+        "lastError": "Delivering to Telegram requires target <chatId>"
+      }
+    },
+    {
+      "id": "10133a5a-62a1-48e3-9bac-c1ea6da460aa",
+      "agentId": "julesmomentumbot",
+      "name": "JulesMomentumBot-heartbeat",
+      "description": "JulesMomentumBot - 5min market monitoring",
+      "enabled": true,
+      "createdAtMs": 1772867802872,
+      "updatedAtMs": 1772964207110,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 300000,
+        "anchorMs": 1772867802872
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute the full heartbeat sequence from HEARTBEAT.md: check USDT balance, BTCUSDT price, ETHUSDT price, RSI(14)/EMA(50)/EMA(200) on 1h, volume rank, evaluate BUY/SELL signals, execute if conditions met, send Telegram summary.",
+        "timeoutSeconds": 120,
+        "lightContext": true
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram"
+      },
+      "state": {
+        "nextRunAtMs": 1772967807110,
+        "lastRunAtMs": 1772964136959,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 70151,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 8,
+        "lastError": "Delivering to Telegram requires target <chatId>"
+      }
+    }
+  ]
+}
