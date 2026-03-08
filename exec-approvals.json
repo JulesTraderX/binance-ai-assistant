@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "socket": {},
+  "defaults": {},
+  "agents": {
+    "binancesupportai": {
+      "allowlist": [
+        {
+          "pattern": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+          "lastUsedAt": 1772870437421,
+          "id": "c59149ce-7a60-4b57-a5c2-22ddc2c60768"
+        },
+        {
+          "pattern": "C:/Windows/System32/cmd.exe",
+          "lastUsedAt": 1772870458458
+        }
+      ]
+    }
+  }
+}

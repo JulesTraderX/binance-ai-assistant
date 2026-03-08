@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Binance Futures — Complete Trading Guide</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0b0e11;
+    color: #eaecef;
+    padding: 40px;
+    line-height: 1.7;
+  }
+  .cover {
+    text-align: center;
+    padding: 60px 20px 40px;
+    border-bottom: 2px solid #F0B90B;
+    margin-bottom: 40px;
+  }
+  .logo {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F0B90B;
+    letter-spacing: 2px;
+  }
+  .logo span { color: #fff; }
+  .cover h1 {
+    font-size: 28px;
+    color: #fff;
+    margin: 20px 0 10px;
+    font-weight: 700;
+  }
+  .cover p {
+    color: #848e9c;
+    font-size: 14px;
+  }
+  .badge {
+    display: inline-block;
+    background: #F0B90B;
+    color: #0b0e11;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .warning-box {
+    background: rgba(240,185,11,0.1);
+    border-left: 4px solid #F0B90B;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 30px 0;
+    font-size: 14px;
+    color: #F0B90B;
+  }
+  .section {
+    margin-bottom: 40px;
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F0B90B;
+    border-bottom: 1px solid #2b3139;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .step {
+    background: #1e2329;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #2b3139;
+  }
+  .step h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .step-num {
+    background: #F0B90B;
+    color: #0b0e11;
+    font-weight: 900;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .step ul {
+    padding-left: 18px;
+    color: #b7bdc6;
+    font-size: 14px;
+  }
+  .step ul li { margin-bottom: 6px; }
+  .step p { color: #b7bdc6; font-size: 14px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .card {
+    background: #1e2329;
+    border-radius: 10px;
+    padding: 18px 20px;
+    border: 1px solid #2b3139;
+  }
+  .card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #F0B90B;
+    margin-bottom: 10px;
+  }
+  .card p, .card ul {
+    font-size: 13px;
+    color: #b7bdc6;
+  }
+  .card ul { padding-left: 16px; }
+  .card ul li { margin-bottom: 5px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  th {
+    background: #F0B90B;
+    color: #0b0e11;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 700;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #2b3139;
+    color: #b7bdc6;
+  }
+  tr:hover td { background: #1e2329; }
+  .green { color: #0ecb81; font-weight: 600; }
+  .red { color: #f6465d; font-weight: 600; }
+  .yellow { color: #F0B90B; font-weight: 600; }
+
+  .tip-box {
+    background: #0d2b1e;
+    border-left: 4px solid #0ecb81;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #0ecb81;
+  }
+  .danger-box {
+    background: #2b0d12;
+    border-left: 4px solid #f6465d;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #f6465d;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid #2b3139;
+    color: #848e9c;
+    font-size: 12px;
+  }
+  .footer a { color: #F0B90B; text-decoration: none; }
+  @media print {
+    body { background: #fff; color: #000; padding: 20px; }
+    .step, .card { border: 1px solid #ddd; background: #f9f9f9; }
+    table th { background: #F0B90B; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="logo">BINANCE<span>.</span></div>
+  <h1>Futures Trading — Complete Guide</h1>
+  <p>How to use Binance Futures effectively | Educational Reference</p>
+  <div class="badge">🟡 Binance Support AI</div>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="warning-box">
+  ⚠️ <strong>Risk Disclaimer:</strong> Futures trading involves substantial risk of loss. Leverage amplifies both gains and losses. This document is for educational purposes only and does not constitute financial advice. Never trade with funds you cannot afford to lose.
+</div>
+
+<!-- SECTION 1: WHAT ARE FUTURES -->
+<div class="section">
+  <div class="section-title">📘 1. What Are Binance Futures?</div>
+  <div class="step">
+    <p>Binance Futures allows you to trade cryptocurrency contracts with leverage — meaning you can control a position larger than your actual capital. There are two main types:</p>
+    <br>
+    <ul>
+      <li><strong>USD-M Futures:</strong> Settled in USDT/BUSD. Most popular. Ideal for stable returns in USD value.</li>
+      <li><strong>COIN-M Futures:</strong> Settled in the underlying cryptocurrency (BTC, ETH...). Better if you want to accumulate crypto.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECTION 2: SETUP -->
+<div class="section">
+  <div class="section-title">⚙️ 2. How to Get Started</div>
+
+  <div class="step">
+    <h3><span class="step-num">1</span> Activate your Futures account</h3>
+    <ul>
+      <li>Go to Binance → Derivatives → USD-M Futures</li>
+      <li>Accept terms & conditions</li>
+      <li>Pass the knowledge quiz (mandatory)</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <h3><span class="step-num">2</span> Fund your Futures wallet</h3>
+    <ul>
+      <li>Transfer USDT from Spot wallet to Futures wallet</li>
+      <li>Menu: Wallet → Transfer → Spot → Futures</li>
+      <li>Minimum recommended: $50–$100 to start safely</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <h3><span class="step-num">3</span> Configure your settings</h3>
+    <ul>
+      <li><strong>Margin mode:</strong> Isolated (safer for beginners) vs Cross (shares entire wallet)</li>
+      <li><strong>Leverage:</strong> Start with 2x–5x maximum when learning</li>
+      <li><strong>Asset mode:</strong> Single-asset or Multi-asset (advanced)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECTION 3: KEY CONCEPTS -->
+<div class="section">
+  <div class="section-title">🔑 3. Key Concepts to Master</div>
+  <div class="grid">
+    <div class="card">
+      <h4>📊 Long vs Short</h4>
+      <ul>
+        <li><strong>Long:</strong> Bet the price goes UP. Profit when price rises.</li>
+        <li><strong>Short:</strong> Bet the price goes DOWN. Profit when price falls.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>⚡ Leverage</h4>
+      <ul>
+        <li>10x leverage = control $1000 with $100</li>
+        <li>Amplifies profits AND losses equally</li>
+        <li>Higher leverage = liquidation risk closer</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>💧 Margin</h4>
+      <ul>
+        <li><strong>Initial margin:</strong> Capital required to open position</li>
+        <li><strong>Maintenance margin:</strong> Minimum to keep it open</li>
+        <li>Below maintenance = liquidation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>💸 Funding Rate</h4>
+      <ul>
+        <li>Fee paid between longs and shorts every 8h</li>
+        <li>Positive rate: longs pay shorts</li>
+        <li>Negative rate: shorts pay longs</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>📉 Liquidation</h4>
+      <ul>
+        <li>When margin drops below maintenance level</li>
+        <li>Position is automatically closed</li>
+        <li>Use stop-loss to avoid this</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>📋 Order Types</h4>
+      <ul>
+        <li><strong>Market:</strong> Instant execution</li>
+        <li><strong>Limit:</strong> Execute at your target price</li>
+        <li><strong>Stop-Market / Stop-Limit:</strong> Risk management</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: STRATEGIES -->
+<div class="section">
+  <div class="section-title">📈 4. Common Trading Approaches</div>
+
+  <div class="step">
+    <h3>🎯 Trend Following</h3>
+    <p>Trade in the direction of the dominant trend. Use moving averages (MA20, MA50, MA200) to identify trend direction. Long in uptrends, short in downtrends.</p>
+  </div>
+
+  <div class="step">
+    <h3>📊 Support & Resistance</h3>
+    <p>Identify key price levels where the market repeatedly reverses. Buy near support, sell/short near resistance. Use order book depth to confirm levels.</p>
+  </div>
+
+  <div class="step">
+    <h3>⚡ Scalping</h3>
+    <p>Take many small profits throughout the day. Uses 1m–5m charts. Requires discipline and fast execution. High frequency, small leverage (3x–5x max).</p>
+  </div>
+
+  <div class="step">
+    <h3>🏗️ Swing Trading</h3>
+    <p>Hold positions for days or weeks to capture larger moves. Uses 4h–1D charts. Requires patience. Less affected by short-term noise.</p>
+  </div>
+</div>
+
+<!-- SECTION 5: RISK MANAGEMENT -->
+<div class="section">
+  <div class="section-title">🛡️ 5. Risk Management — The Most Important Section</div>
+
+  <div class="danger-box">
+    ❌ Most traders lose money not because of bad strategy, but because of poor risk management.
+  </div>
+
+  <table>
+    <tr>
+      <th>Rule</th>
+      <th>Recommended</th>
+      <th>Why</th>
+    </tr>
+    <tr>
+      <td>Risk per trade</td>
+      <td class="green">1–2% of capital</td>
+      <td>Survive a losing streak</td>
+    </tr>
+    <tr>
+      <td>Leverage</td>
+      <td class="yellow">2x–10x max</td>
+      <td>Avoid fast liquidation</td>
+    </tr>
+    <tr>
+      <td>Stop-Loss</td>
+      <td class="green">Always set one</td>
+      <td>Limits max loss per trade</td>
+    </tr>
+    <tr>
+      <td>Take-Profit</td>
+      <td class="green">Set before entering</td>
+      <td>Lock profits automatically</td>
+    </tr>
+    <tr>
+      <td>Risk/Reward ratio</td>
+      <td class="green">Minimum 1:2</td>
+      <td>Profitable even at 40% win rate</td>
+    </tr>
+    <tr>
+      <td>Daily loss limit</td>
+      <td class="yellow">Max 5–10% per day</td>
+      <td>Stop trading when in bad shape</td>
+    </tr>
+  </table>
+
+  <div class="tip-box">
+    ✅ <strong>Golden Rule:</strong> Set your Stop-Loss BEFORE opening the position. Never move it further against you.
+  </div>
+</div>
+
+<!-- SECTION 6: BINANCE TOOLS -->
+<div class="section">
+  <div class="section-title">🛠️ 6. Useful Binance Futures Tools</div>
+  <div class="grid">
+    <div class="card">
+      <h4>📊 TradingView Charts</h4>
+      <p>Built-in on Binance. Use indicators: RSI, MACD, Bollinger Bands, EMA.</p>
+    </div>
+    <div class="card">
+      <h4>🤖 Trading Bots</h4>
+      <p>Binance offers Futures Grid Bot — automates buying low and selling high in a range.</p>
+    </div>
+    <div class="card">
+      <h4>📐 Margin Calculator</h4>
+      <p>Calculate your liquidation price, required margin, and PnL before entering a trade.</p>
+    </div>
+    <div class="card">
+      <h4>📋 Trade History & PnL</h4>
+      <p>Track your performance. Review winning/losing trades. Identify patterns to improve.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 7: FEES -->
+<div class="section">
+  <div class="section-title">💰 7. Fees on Binance Futures</div>
+  <table>
+    <tr>
+      <th>Fee Type</th>
+      <th>Rate</th>
+      <th>Notes</th>
+    </tr>
+    <tr>
+      <td>Maker fee</td>
+      <td class="green">0.0200%</td>
+      <td>Limit orders that add liquidity</td>
+    </tr>
+    <tr>
+      <td>Taker fee</td>
+      <td class="yellow">0.0500%</td>
+      <td>Market orders / instant fill</td>
+    </tr>
+    <tr>
+      <td>Funding rate</td>
+      <td class="yellow">Variable (every 8h)</td>
+      <td>Check before holding overnight</td>
+    </tr>
+    <tr>
+      <td>BNB discount</td>
+      <td class="green">-10%</td>
+      <td>Pay fees in BNB to save</td>
+    </tr>
+  </table>
+</div>
+
+<!-- SECTION 8: CHECKLIST -->
+<div class="section">
+  <div class="section-title">✅ 8. Pre-Trade Checklist</div>
+  <div class="step">
+    <ul>
+      <li>☐ Identified the trend (up, down, sideways)?</li>
+      <li>☐ Checked key support/resistance levels?</li>
+      <li>☐ Defined entry price?</li>
+      <li>☐ Set Stop-Loss level (never skip this)?</li>
+      <li>☐ Set Take-Profit target?</li>
+      <li>☐ Calculated risk/reward ratio (min 1:2)?</li>
+      <li>☐ Checked funding rate (if holding for hours)?</li>
+      <li>☐ Position size appropriate (max 1–2% risk)?</li>
+      <li>☐ No major news event upcoming that could spike volatility?</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>📚 Official Binance Futures Help Center: <a href="https://www.binance.com/en/support/faq/futures">binance.com/en/support/faq/futures</a></p>
+  <p>🔒 For account issues: <a href="https://www.binance.com/en/chat">binance.com/en/chat</a></p>
+  <br>
+  <p>Generated by <strong>🟡 Binance Support AI</strong> — For educational purposes only. Not financial advice.</p>
+</div>
+
+</body>
+</html>
