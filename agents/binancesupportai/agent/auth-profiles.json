@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "profiles": {
+    "anthropic:default": {
+      "type": "api_key",
+      "provider": "anthropic",
+      "key": "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"
+    }
+  },
+  "usageStats": {
+    "anthropic:default": {
+      "errorCount": 0,
+      "lastUsed": 1772965341630
+    }
+  }
+}
